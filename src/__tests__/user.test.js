@@ -1,5 +1,5 @@
-import App from "./App";
-import User from "./component/User";
+import App from "../App";
+import User from "../component/User";
 import { render,screen ,fireEvent } from "@testing-library/react";
 
 test("tesing user case 1",()=>{
@@ -17,4 +17,10 @@ test("testing on click event",()=>{
     let btn=screen.getByRole("button");
     fireEvent.click(btn);
     expect(screen.getByText("hello ashish")).toBeInTheDocument();
+})
+
+test("testing on snape",()=>{
+   const compinn= render(<User/>);
+   expect(compinn).toMatchSnapshot();
+
 })

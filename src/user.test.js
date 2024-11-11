@@ -4,7 +4,7 @@ import { render,screen ,fireEvent } from "@testing-library/react";
 
 test("tesing user case 1",()=>{
      
-    render(<User/>)
+    render(<User/>);
     let input=screen.getByRole("textbox");
     fireEvent.change(input,{target:{value:'a'}})
    // expect(input).toHaveAttribute("name","username");
